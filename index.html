@@ -1,0 +1,75 @@
+<html>
+<header>
+    <style>
+        body {
+            /*background-color: #fd02dd;*/
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        .menu {
+            display: flex;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5em;
+        }
+
+        .menu-item{
+            float: left;
+            margin-left: 3em;
+            margin-right: 3em;
+            text-transform: uppercase;
+        }
+
+        .logo{
+            width: 48px;
+        }
+
+        .image-cropper {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+
+        .background{
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+        }
+        .background::before{
+            content: "";
+            background: url(coverLarge.png);
+            background-size: cover;
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+
+    </style>
+</header>
+<body>
+    <div class="background">
+        <div class="menu">
+            <div class="image-cropper"><img class="logo" src="logo.jpg"/></div>
+            <div class="menu-item">Home</div>
+            <div class="menu-item">About me</div>
+            <div class="menu-item">Yoga videos</div>
+        </div>
+    </div>
+</body>
+</html>
